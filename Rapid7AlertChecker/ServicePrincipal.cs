@@ -12,7 +12,7 @@ namespace Rapid7AlertChecker
         public static string resource = ConfigurationManager.AppSettings["Resource"];
         public static string authorityUri = ConfigurationManager.AppSettings["AuthorityUri"];
         public static string client_id = ConfigurationManager.AppSettings["Client_ID"];
-        public static string cred_target = "Rapid7Alerts";
+        public static string cred_target = ConfigurationManager.AppSettings["CredentialManagerTarget"];
 
         static public async Task<AuthenticationResult> GetS2SAccessTokenForProdMSAAsync()
         {
@@ -20,7 +20,7 @@ namespace Rapid7AlertChecker
             {
                 authorityUri = ConfigurationManager.AppSettings["TestAuthorityUri"];
                 client_id = ConfigurationManager.AppSettings["Test_Client_ID"];
-                cred_target = "TestRapid7Alerts";
+                cred_target = ConfigurationManager.AppSettings["TestCredentialManagerTarget"];
             }
 
             // Pulls credentials out of Windows Credential Manager.

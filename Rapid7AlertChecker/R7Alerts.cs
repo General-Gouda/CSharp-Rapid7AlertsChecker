@@ -13,6 +13,7 @@ namespace Rapid7AlertChecker
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private static string graph_api_endpoint = ConfigurationManager.AppSettings["Graph_API_Endpoint"];
         private static string username = ConfigurationManager.AppSettings["Username"];
+        private static string slackWebHook = ConfigurationManager.AppSettings["SlackWebhook"];
         private static Boolean testing = Convert.ToBoolean(ConfigurationManager.AppSettings["Testing"]);
         readonly Timer _timer;
 
@@ -48,19 +49,13 @@ namespace Rapid7AlertChecker
 
         public virtual void R7Alerts(object sender, ElapsedEventArgs e)
         {
-            string slackAccess;
-
             if (testing)
             {
-                slackAccess = "TestingSlackWebhookGoesHere"; // Testing
+                slackWebHook = ConfigurationManager.AppSettings["TestSlackWebhook"];
                 username = ConfigurationManager.AppSettings["TestUsername"];
             }
-            else
-            {
-                slackAccess = "ProductionSlackWebhookGoesHere"; // Production
-            }
 
-            SlackClient<string> slackClient = new SlackClient<string>(slackAccess);
+            SlackClient<string> slackClient = new SlackClient<string>(slackWebHook);
 
             try
             {
