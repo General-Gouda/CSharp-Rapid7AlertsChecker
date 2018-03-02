@@ -42,9 +42,11 @@ namespace Rapid7AlertChecker
         {
             AuthenticationContext context = new AuthenticationContext(authority);
             AuthenticationResult authenticationResult = await context.AcquireTokenAsync(
-                resource,  // the resource (app) we are going to access with the token
-                client_id, // client id
-                userCredentials);  // the user credentials
+                resource,
+                client_id,
+                userCredentials
+            );
+
             return authenticationResult;
         }
     }
