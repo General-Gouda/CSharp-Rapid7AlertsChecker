@@ -1,5 +1,5 @@
 # Rapid7AlertsChecker
-C# application that reads emails from a mailbox in Office 365, parses them and sends them to Slack as notifications.
+C# application that reads Rapid7 Alert emails from a mailbox in Office 365, parses them and sends them to Slack as notifications.
 
 Steps needed to set up Azure AD Application so it can read specified mailbox securely.
 
