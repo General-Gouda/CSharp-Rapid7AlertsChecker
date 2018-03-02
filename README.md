@@ -31,6 +31,8 @@ Steps needed to set up Azure AD Application so it can read specified mailbox sec
 
 References:
 https://docs.microsoft.com/en-us/azure/active-directory/active-directory-coreapps-assign-user-azure-portal
+
 https://serverfault.com/questions/845293/how-to-assign-users-to-a-native-app-in-azure-ad
+
 https://docs.microsoft.com/en-us/azure/active-directory/application-access-assignment-how-to-add-assignment#assign-a-user-directly-as-an-administrator
 	
