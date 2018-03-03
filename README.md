@@ -1,6 +1,17 @@
 # Rapid7AlertsChecker
 C# application that reads Rapid7 Alert emails from a mailbox in Office 365, parses them and sends them to Slack as notifications.
 
+Libraries used in the creation of this program:
+- TopShelf - http://topshelf-project.com/
+- Newtonsoft.Json - https://www.newtonsoft.com/json
+- CredentialManagement - https://archive.codeplex.com/?p=credentialmanagement
+- Html2Markdown - https://github.com/baynezy/Html2Markdown
+- HtmlAgilityPack - http://html-agility-pack.net/
+- NLog - http://nlog-project.org/
+- RestSharp - http://restsharp.org/
+
+A special thanks to the developers of these libraries for making the creation of small progarms like these much much easier for people such as myself! :) 
+
 Steps needed to set up Azure AD Application so it can read specified mailbox securely.
 
 1. Go to Azure AD Admin Center - https://aad.portal.azure.com
