@@ -10,7 +10,7 @@ Libraries used in the creation of this program:
 - NLog - http://nlog-project.org/
 - RestSharp - http://restsharp.org/
 
-A special thanks to the developers of these libraries for making the creation of small progarms like these much much easier for people such as myself! :) 
+A special thanks to the developers of these libraries for making the creation of small programs like these much much easier for people such as myself! :) 
 
 Steps needed to set up Azure AD Application so it can read specified mailbox securely.
 
